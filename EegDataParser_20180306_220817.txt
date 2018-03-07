@@ -1,0 +1,30 @@
+ERROR - 22:08:18: java.net.MalformedURLException: unknown protocol: pathmap
+ERROR - 22:08:31: org.xml.sax.SAXParseExceptionpublicId: /EegDataParser/src/main/java/EegDataParser/io/FileReader.java; systemId: file:///EegDataParser/src/main/java/EegDataParser/io/FileReader.java; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+ERROR - 22:08:31: org.xml.sax.SAXParseExceptionpublicId: /EegDataParser/src/main/java/EegDataParser/io/FileReader.java; systemId: file:///EegDataParser/src/main/java/EegDataParser/io/FileReader.java; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+WARNING - 22:08:57: Convert EegDataParser.masterdata
+WARNING - 22:08:57: First conversion pass
+ERROR - 22:08:57: java.net.MalformedURLException: unknown protocol: pathmap
+WARNING - 22:09:09: Convert EegDataParser.masterdata
+WARNING - 22:09:09: First conversion pass
+ERROR - 22:09:09: org.xml.sax.SAXParseExceptionpublicId: /EegDataParser/src/main/java/EegDataParser/operationaldata/Patient.java; systemId: file:///EegDataParser/src/main/java/EegDataParser/operationaldata/Patient.java; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+ERROR - 22:09:09: org.xml.sax.SAXParseExceptionpublicId: /EegDataParser/src/main/java/EegDataParser/operationaldata/Patient.java; systemId: file:///EegDataParser/src/main/java/EegDataParser/operationaldata/Patient.java; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+ERROR - 22:14:36: java.net.MalformedURLException: unknown protocol: pathmap
+ERROR - 22:14:40: java.net.MalformedURLException: unknown protocol: pathmap
+ERROR - 22:14:46: java.net.MalformedURLException: unknown protocol: pathmap
+WARNING - 22:14:59: Convert cammed
+ERROR - 22:14:59: java.net.MalformedURLException: unknown protocol: pathmap
+WARNING - 22:15:05: Convert cammed
+INFO - 22:15:05: Entering Java JavaProject cammed
+INFO - 22:15:05:    UML ModelImpl cammed was created
+ERROR - 22:15:05: java.net.MalformedURLException: unknown protocol: pathmap
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+org.eclipse.umlgen.reverse.java.AbstractJava2UMLConverter.load(AbstractJava2UMLConverter.java:2274)
+org.eclipse.umlgen.reverse.java.Java2UMLConverter.initializeModel(Java2UMLConverter.java:137)
+org.eclipse.umlgen.reverse.java.AbstractJava2UMLConverter.doConvertion(AbstractJava2UMLConverter.java:453)
+org.eclipse.umlgen.reverse.java.AbstractJava2UMLConverter.convert(AbstractJava2UMLConverter.java:253)
+org.eclipse.umlgen.reverse.java.AbstractJava2UMLConverter.convert(AbstractJava2UMLConverter.java:2248)
+org.eclipse.umlgen.reverse.java.internal.wizards.Java2UMLWizard.doFinish(Java2UMLWizard.java:178)
+org.eclipse.umlgen.reverse.java.internal.wizards.Java2UMLWizard$1.run(Java2UMLWizard.java:104)
+org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
