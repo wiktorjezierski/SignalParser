@@ -43,7 +43,8 @@ public class SignalGroupper {
 		for (Odprowadzenie odprowadzenie : Odprowadzenie.values()) {
 			Queue<Odprowadzenie> toCheck = createQueueWithInitialValue(odprowadzenie);
 			Signal signal = findSignal(task, wave, toCheck, checked, null);
-			signals.add(signal);
+			if(signal != null)
+				signals.add(signal);
 		}
 	}
 
@@ -55,6 +56,7 @@ public class SignalGroupper {
 
 	private Signal findSignal(Task task, Wave wave, Queue<Odprowadzenie> toCheck, Set<Odprowadzenie> checked, Signal signal) {
 		if(toCheck.isEmpty() || checked.contains(toCheck.peek())) {
+			toCheck.poll();
 			return signal;
 		}
 		
@@ -65,7 +67,10 @@ public class SignalGroupper {
 		if(isAtLeastOneSignal(numberOfWavesInSignal)) {
 			toCheck.addAll(retrieveNeighbors(current));
 			signal = createOrExtendSignal(signal, task, wave, current);
-			return findSignal(task, wave, toCheck, checked, signal);
+		}
+		
+		while(!toCheck.isEmpty()) {
+			signal = findSignal(task, wave, toCheck, checked, signal);
 		}
 		
 		return signal;
