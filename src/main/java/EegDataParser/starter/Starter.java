@@ -23,7 +23,7 @@ public class Starter {
 		List<Result> result = analyzer.analyze(signals, patients.size());
 		
 		CalculateStatistics calculateStatistics = new CalculateStatistics();
-		calculateStatistics.calculate(result, analyzer.getBreakPoints());
+		calculateStatistics.calculate(result, analyzer.getBreakPoints(), patients.size());
 	}
 
 }

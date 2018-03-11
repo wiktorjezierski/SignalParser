@@ -1,7 +1,7 @@
 package EegDataParser.operationaldata;
 
 public enum Tasks {
-	RO1, 
+	R01, 
 	R02,
 	R03,
 	R04,
