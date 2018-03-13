@@ -32,7 +32,7 @@ public class CalculateStatistics {
 		Map<Wave, Sumator> statistics = initializeStatistics(patientsSize);
 		for(Tasks task : Tasks.values()) {
 			Result result = findResult(key2result, breakPoint, task);
-
+			System.out.println(result);
 			for (Entry<Wave, Data> entry : result.getData().entrySet()) {
 				Sumator sumator = statistics.get(entry.getKey());
 				sumator.addValues(entry.getValue());
@@ -43,7 +43,7 @@ public class CalculateStatistics {
 	}
 
 	private void display(Integer breakPoint, Map<Wave, Sumator> statistics) {
-		System.out.println("\nbreakpoint " + breakPoint);
+		System.out.println("\nbreakpoint " + breakPoint + "\n\t\tOK\t!OK\tOK%\t!OK%");
 		String defaultFormat = "%s\t%s";
 		String specificFormat = "%s\t\t%s";
 		String format;
@@ -103,7 +103,8 @@ public class CalculateStatistics {
 		
 		@Override
 		public String toString() {
-			return String.format("%d\t%d\t%d%%\t%d%%", ok, notOk, ok/patientsSize, notOk/patientsSize);
+			double all = (double)ok + notOk;
+			return String.format("%d\t%d\t%.2f%%\t%.2f%%", ok, notOk, (ok/all)*100, (notOk/all)*100);
 		}
 	}
 
